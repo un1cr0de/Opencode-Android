@@ -1,0 +1,19 @@
+# staged downloads / extracted assets
+*.apk
+*.tar.gz
+opencode
+opencode-bin
+
+# local config with a pasted key
+opencode.local.json
+*.bak
+
+# adb/editor noise
+*.log
+.DS_Store
+Thumbs.db
+
+# installer cache and adb (install-opencode.cmd)
+downloads/
+platform-tools/
+install.log

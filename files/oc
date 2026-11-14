@@ -1,0 +1,13 @@
+#!/bin/sh
+# In-chroot launcher. Runs opencode as root inside the Alpine rootfs.
+#
+# Install to: <rootfs>/usr/local/bin/oc (0755)
+
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+export HOME=/root
+export TERM="${TERM:-xterm-256color}"
+export LANG=C.UTF-8
+export TMPDIR=/tmp
+
+cd "${OPENCODE_CWD:-$HOME/projects}" 2>/dev/null || cd "$HOME"
+exec opencode "$@"
